@@ -1,9 +1,6 @@
-#20までの偶数を表示してください
+# 「りんご」、「ばなな」、「みかん」と表示させてください
 
-#1
-for i in range(10):
-    print((i+1)*2)
-    
-#2
-for i in range(1, 11):
-    print(2*i)
+fruits = ["りんご", "ばなな", "みかん"]
+
+for fruit in fruits:
+    print(fruit)
