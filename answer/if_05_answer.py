@@ -1,4 +1,4 @@
-n = int(input("好きな整数を入力してください"))
+n = int(input("好きな自然数を入力してください"))
 
 flag = False
 for i in range(2, n):
