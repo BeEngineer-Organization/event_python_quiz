@@ -1,49 +1,29 @@
-# 便利機能を使う宣言
-import time
+# PC とじゃんけんしよう
+
+# PC はランダムで手を選びます。
+# グー：0、チョキ：1、パー：2という値に対応しています。
+# 0、１、２以外の数字が入力された場合は「不正な入力です。」と出力します。
+
 import random
 
-# カウントダウン
-print("5秒以内に数字を入力してください")
-print(3)
-time.sleep(1)
-print(2)
-time.sleep(1)
-print(1)
-time.sleep(1)
 
-# 答えの数字をランダムに作成
-num = int(random.random() * 1000000)
-print(num)
+def parse_number_to_hand(num):
+    if num == 0:
+        return "グー"
+    elif num == 1:
+        return "チョキ"
+    elif num == 2:
+        return "パー"
+    else:
+        print("不正な入力です")
 
-# 開始時間を計測
-start = time.time()
 
-# 入力を求める
-input_num = int(input("数字を入力してください："))
+print("グー：0、チョキ：1、パー：2")
 
-# 入力後の時間を計測
-end = time.time()
+your_hand = int(input("あなたの手を半角数字で入力してください："))
+computer_hand = random.randint(0, 2)
 
-# 入力後の時間と開始時間の引き算から、
-# 入力にかかった時間を計測
-time = end - start
+print("あなたの手：", parse_number_to_hand(your_hand))
+print("コンピュータの手：", parse_number_to_hand(computer_hand))
 
-# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ #
-# 答えの判定のコードを書いてみよう！ #
-# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ #
-
-# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　ロジック　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ #
-# 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 #
-# 　　正解の数字と入力した数字が一致するーーーーーーーーーーーーーーー　　　　 #
-# 　　　　｜　　　　　　　　　　　　　　　　　　　　　　　　　　　　｜　　　　 #
-# 　　　　｜〇　　　　　　　　　　　　　　　　　　　　　　　　　　　｜　　　　 #
-# 　　　　｜　　　　　　　　　　　　　　　　　　　　　　　　　　　　｜　　　　 #
-# 　　かかった時間が５秒以内ーーーーーーーー　　　　　　　　　　　　｜　　　　 #
-# 　　　　｜　　　　　　　　　　　　　　　｜　　　　　　　　　　　　｜　　　　 #
-# 　　　　｜〇　　　　　　　　　　　　　　｜✕　　　　　　　　　　　｜✕　　　　#
-# 　　　　｜　　　　　　　　　　　　　　　｜　　　　　　　　　　　　｜　　　　 #
-# 　　「成功！」と表示　　　「正解！でも遅い、、」と表示　　　「失敗」と表示　 #
-# 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 #
-# 　　結果に関わらず、かかった時間も表示する。                              #
-# 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 #
-# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ #
+# ここから書く

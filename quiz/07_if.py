@@ -1,29 +1,11 @@
-# PC とじゃんけんしよう
+# 3つ数字を入力し、それを大きい順に出力してください
 
-# PC はランダムで手を選びます。
-# グー：0、チョキ：1、パー：2という値に対応しています。
-# 0、１、２以外の数字が入力された場合は「不正な入力です。」と出力します。
+num_1 = int(input("1つ目の数字を入力してください"))
+num_2 = int(input("2つ目の数字を入力してください"))
+num_3 = int(input("3つ目の数字を入力してください"))
 
-import random
+# ここにコードを書きましょう
 
-
-def parse_number_to_hand(num):
-    if num == 0:
-        return "グー"
-    elif num == 1:
-        return "チョキ"
-    elif num == 2:
-        return "パー"
-    else:
-        print("不正な入力です")
-
-
-print("グー：0、チョキ：1、パー：2")
-
-your_hand = int(input("あなたの手を半角数字で入力してください："))
-computer_hand = random.randint(0, 2)
-
-print("あなたの手：", parse_number_to_hand(your_hand))
-print("コンピュータの手：", parse_number_to_hand(computer_hand))
-
-# ここから書く
+print(num_1)
+print(num_2)
+print(num_3)
